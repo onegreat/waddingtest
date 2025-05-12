@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алексей и Анна | Приглашение на свадьбу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="wedding-header">
+      <div class="header-content">
+        <h1 class="names">Алексей <span>&</span> Анна</h1>
+        <p class="date">15 Июля 2025</p>
+      </div>
+      <div class="photo-gallery">
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Фото 1"
+            class="bw-photo"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Фото 2"
+            class="bw-photo"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Фото 3"
+            class="bw-photo"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="program-day">
+      <div class="container">
+        <h2 class="section-title">Программа дня</h2>
+        <div class="timeline">
+          <!-- Элемент 1 -->
+          <div class="timeline-item">
+            <div class="timeline-time">15:00</div>
+            <div class="timeline-content">
+              <h3>Церемония</h3>
+              <p>Торжественная регистрация брака</p>
+              <div class="timeline-decoration"></div>
+            </div>
+          </div>
+
+          <!-- Элемент 2 -->
+          <div class="timeline-item">
+            <div class="timeline-time">16:30</div>
+            <div class="timeline-content">
+              <h3>Фуршет</h3>
+              <p>Легкие закуски и напитки</p>
+              <div class="timeline-decoration"></div>
+            </div>
+          </div>
+
+          <!-- Элемент 3 -->
+          <div class="timeline-item">
+            <div class="timeline-time">18:00</div>
+            <div class="timeline-content">
+              <h3>Банкет</h3>
+              <p>Торжественный ужин и поздравления</p>
+              <div class="timeline-decoration"></div>
+            </div>
+          </div>
+
+          <!-- Элемент 4 -->
+          <div class="timeline-item">
+            <div class="timeline-time">22:00</div>
+            <div class="timeline-content">
+              <h3>Завершение</h3>
+              <p>Сладкий финал вечера</p>
+              <div class="timeline-decoration"></div>
+            </div>
+          </div>
+
+          <!-- Вертикальная линия -->
+          <div class="timeline-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dresscode">
+      <div class="container">
+        <h2 class="section-title">Дресс-код</h2>
+        <div class="dresscode-content">
+          <div class="dresscode-text">
+            <p>
+              Мы будем рады, если вы поддержите цветовую гамму нашего торжества
+              в своих нарядах.
+            </p>
+            <p>
+              <strong>Мужчины:</strong> Классические костюмы в темных тонах
+              (черный, темно-синий, графитовый)
+            </p>
+            <p>
+              <strong>Женщины:</strong> Вечерние платья в глубоких тонах
+              (черное, бордо, изумрудное, темно-синее)
+            </p>
+            <p>Пожалуйста, избегайте белого и светлых пастельных оттенков.</p>
+          </div>
+          <div class="dresscode-colors">
+            <div class="color-box" style="background-color: #000000"></div>
+            <div class="color-box" style="background-color: #0a0a0a"></div>
+            <div class="color-box" style="background-color: #1a1a1a"></div>
+            <div class="color-box" style="background-color: #2a2a2a"></div>
+            <div class="color-box" style="background-color: #3a3a3a"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp">
+      <div class="container">
+        <h2 class="section-title">Подтвердите участие</h2>
+        <form class="rsvp-form">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="guests">Количество гостей</label>
+            <select id="guests" name="guests">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="attending">Вы придёте?</label>
+            <select id="attending" name="attending">
+              <option value="yes">С радостью!</option>
+              <option value="no">К сожалению, не смогу</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Ваши пожелания</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2 class="section-title">Наши моменты</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1518131672697-613becd4fab5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Фото 1"
+              class="gallery-img"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Фото 2"
+              class="gallery-img"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Фото 3"
+              class="gallery-img"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Фото 4"
+              class="gallery-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="footer-text">Мы будем рады видеть вас на нашем празднике!</p>
+        <p>С любовью, Алексей и Анна <span class="heart">❤</span></p>
+      </div>
+    </footer>
+  </body>
+</html>
