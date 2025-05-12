@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="wedding-header">
@@ -43,9 +43,23 @@
       </div>
     </header>
 
+    <section class="location">
+      <div class="container">
+        <h2 class="section-title">Место проведения торжества</h2>
+        <div class="location-photo">
+          <img src="img/location.jpg">
+        </div>
+        <div class="location-content">
+          <div class="location-text">
+          Ресторан Panorama Steak House. Воронеж, проспект Ленинский, д. 1д ТЦ Левый берег
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="program-day">
       <div class="container">
-        <h2 class="section-title">Программа дня</h2>
+        <h2 class="section-title-second">Программа дня</h2>
         <div class="timeline">
           <!-- Элемент 1 -->
           <div class="timeline-item">
@@ -125,7 +139,7 @@
 
     <section class="rsvp">
       <div class="container">
-        <h2 class="section-title">Подтвердите участие</h2>
+        <h2 class="section-title-second">Подтвердите участие</h2>
         <form class="rsvp-form">
           <div class="form-group">
             <label for="name">Ваше имя</label>
@@ -158,7 +172,7 @@
 
     <section class="gallery">
       <div class="container">
-        <h2 class="section-title">Наши моменты</h2>
+        <h2 class="section-title-second">Наши моменты</h2>
         <div class="gallery-grid">
           <div class="gallery-item">
             <img
@@ -194,9 +208,22 @@
 
     <footer>
       <div class="container">
-        <p class="footer-text">Мы будем рады видеть вас на нашем празднике!</p>
+        <p class="footer-text">Мы будем рады видеть вас на нашем празднике через...</p>
+        <section class="times">
+          <div class="container">
+            <div class="timer">
+              <div class="timer__item timer__days">00</div>
+              <div class="timer__item timer__hours">00</div>
+              <div class="timer__item timer__minutes">00</div>
+              <div class="timer__item timer__seconds">00</div>
+            </div>
+          </div>
+        </section>
         <p>С любовью, Алексей и Анна <span class="heart">❤</span></p>
       </div>
     </footer>
   </body>
+
+<script src="js/script.js"></script>
+
 </html>

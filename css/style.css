@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -135,7 +136,7 @@
 }
   /* Section styles */
   section {
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
   .section-title {
@@ -155,13 +156,31 @@
 .section-title {
     text-align: center;
     font-size: 2.2rem;
-    color: #000;
+    color: white;
     margin-bottom: 60px;
     position: relative;
     letter-spacing: 1px;
 }
 
 .section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: white;
+    margin: 15px auto 0;
+}
+
+.section-title-second {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #000;
+    margin-bottom: 60px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.section-title-second:after {
     content: '';
     display: block;
     width: 60px;
@@ -286,16 +305,24 @@
         right: auto !important;
     }
 }
-  
+
+/* Location */
+.location {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.location-photo img {
+  width: 50%;
+}
+
 /* Dress code*/
 .dresscode {
     background-color: #111;
     color: #fff;
     padding: 80px 0;
-}
-
-.dresscode .section-title {
-    color: #fff;
 }
 
 .dresscode-content {
@@ -342,141 +369,172 @@
 
 }
 
-  /* RSVP section test */
-  .rsvp {
-    background-color: var(--primary-color);
-    text-align: center;
+/* RSVP section test */
+.rsvp {
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.rsvp-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--light-text);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Gallery section */
+.gallery {
+  background-color: var(--light-text);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Timier section*/
+.times {
+  margin-bottom: 10px;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: 7rem 6rem 6rem 6rem;
+  font-size: 3rem;
+  justify-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timer__item {
+  position: relative;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: #d1d1d1;
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  background-image: url(../img/timer.jpg);
+  z-index: 0;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+}
+
+.heart {
+  color: #ff6b6b;
+}
+
+/* Adaptive */
+@media (max-width: 768px) {
+  .names {
+    font-size: 2.5rem;
   }
 
-  .rsvp-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: var(--light-text);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .date {
+    font-size: 1.2rem;
   }
 
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+  .timeline::before {
+    left: 31px;
   }
 
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
+  .timeline-item {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: "Montserrat", sans-serif;
+    padding-left: 70px;
+    padding-right: 25px;
   }
 
-  .form-group textarea {
-    height: 100px;
+  .timeline-item:nth-child(even) {
+    left: 0;
   }
 
-  .btn {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--light-text);
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  .timeline-dot {
+    left: 21px;
   }
 
-  .btn:hover {
-    background-color: var(--accent-color);
+  .dresscode-text p {
+      font-size: 1rem;
   }
-
-  /* Gallery section */
-  .gallery {
-    background-color: var(--light-text);
+  
+  .color-box {
+      width: 50px;
+      height: 50px;
   }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .gallery-item {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-
-  .gallery-item:hover {
-    transform: scale(1.03);
-  }
-
-  .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Footer */
-  footer {
-    background-color: var(--accent-color);
-    color: var(--light-text);
-    text-align: center;
-    padding: 30px 0;
-  }
-
-  .footer-text {
-    margin-bottom: 20px;
-  }
-
-  .heart {
-    color: #ff6b6b;
-  }
-
-  /* Adaptive */
-  @media (max-width: 768px) {
-    .names {
-      font-size: 2.5rem;
-    }
-
-    .date {
-      font-size: 1.2rem;
-    }
-
-    .timeline::before {
-      left: 31px;
-    }
-
-    .timeline-item {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: 0;
-    }
-
-    .timeline-dot {
-      left: 21px;
-    }
-
-    .dresscode-text p {
-        font-size: 1rem;
-    }
-    
-    .color-box {
-        width: 50px;
-        height: 50px;
-    }
-  }
+}
