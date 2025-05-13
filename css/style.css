@@ -137,6 +137,9 @@
   /* Section styles */
   section {
     padding: 20px 0;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform 1s, opacity 0.5s;
   }
 
   .section-title {
@@ -481,6 +484,24 @@
   transform: translateX(-50%);
   font-size: 0.875rem;
   color: #d1d1d1;
+}
+
+/* Slider */
+
+.owl-item {
+  padding: 5px;
+}
+
+.owl-item .slide {
+  height: 250px;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: visible;
+  transition: transform 0.3s;
+}
+
+.owl-item .slide:hover {
+  transform: scale(1.03);
 }
 
 /* Footer */

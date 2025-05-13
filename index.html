@@ -6,10 +6,9 @@
     <title>Алексей и Анна | Приглашение на свадьбу</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -47,7 +46,20 @@
       <div class="container">
         <h2 class="section-title">Место проведения торжества</h2>
         <div class="location-photo">
-          <img src="img/location.jpg">
+          <div class="owl-carousel owl-theme" id="slider">
+            <div class="slide" style="background-image: url(img/location.jpg)">
+                <h2 class="slide__title"></h2>
+            </div>
+            <div class="slide" style="background-image: url(img/location1.jpg)">
+                <h2 class="slide__title"></h2>
+            </div>
+            <div class="slide" style="background-image: url(img/location2.jpg)">
+                <h2 class="slide__title"></h2>
+            </div>
+            <div class="slide" style="background-image: url(img/location3.jpg)">
+                <h2 class="slide__title"></h2>
+            </div>
+          </div>
         </div>
         <div class="location-content">
           <div class="location-text">
@@ -224,6 +236,8 @@
     </footer>
   </body>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/script.js"></script>
 
 </html>

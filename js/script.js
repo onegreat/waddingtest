@@ -42,3 +42,51 @@ document.addEventListener('DOMContentLoaded', () => {
   updateTimer();
   const timerId = setInterval(updateTimer, 1000);
 });
+
+$(document).ready(function(){
+    const slider = $("#slider").owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  let blocks = document.querySelectorAll('section');
+
+  function checkBlocksVisibility() {
+
+    let windowHeight = window.innerHeight;
+
+    blocks.forEach(block => {
+
+      let blockPosition = block.getBoundingClientRect().top;
+
+      if (blockPosition < windowHeight - 100) {
+        block.style.opacity = "1";
+        block.style.transform = "translateY(0)";
+      } else {
+        block.style.opacity = "0";
+        block.style.transform = "translateY(50px)";
+      }
+
+    });
+
+  }
+
+  checkBlocksVisibility();
+
+  window.addEventListener('scroll', checkBlocksVisibility);
+});
